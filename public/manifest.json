@@ -1,6 +1,6 @@
 {
-  "name": "React Avançado - Boilerplate",
-  "short_name": "React Avançado",
+  "name": "Small Fair - Feira virtual de novos e usados",
+  "short_name": "Small Fair",
   "icons": [
     {
       "src": "/img/icon-192.png",
@@ -15,7 +15,7 @@
   ],
   "theme_color": "#FFFFFF",
   "background_color": "#06092b",
-  "description": "Simple Next.js boilerplate with lint-staged, husky, eslint + prettier, jest, storybook and styled-components",
+  "description": "Feira virtual de novos e usados",
   "start_url": "/",
   "display": "fullscreen",
   "orientation": "portrait"
