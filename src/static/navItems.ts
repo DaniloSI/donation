@@ -2,7 +2,7 @@ import { Search, User, Heart } from 'react-feather';
 
 export default [
   {
-    link: '#', // '/search',
+    link: '/',
     Icon: Search,
     text: 'Search'
   },

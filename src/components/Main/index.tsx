@@ -12,7 +12,7 @@ const Main = () => {
       id: `56528b15-1245-4894-af42-99e9150a23${number}`,
       imageName: itemMock?.imageName ?? '',
       title: itemMock?.title ?? '',
-      price: 5
+      price: Math.abs(Math.tan(number + 1)) * 1000
     };
   });
 

@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 
 import GlobalTheme from '@/components/GlobalTheme';
+import NavBar from '@/components/NavBar';
 import GlobalStyles from '@/styles/global';
 
 function App({ Component, pageProps }: AppProps) {
@@ -17,6 +18,7 @@ function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <GlobalTheme>
         <AnyComponent {...pageProps} />
+        <NavBar />
       </GlobalTheme>
     </>
   );

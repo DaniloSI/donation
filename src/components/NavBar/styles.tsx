@@ -19,13 +19,18 @@ export const Li = styled.li`
   width: fit-content;
 `;
 
-export const MenuLink = styled.a`
+interface MenuLinkProps {
+  active: boolean;
+}
+
+export const MenuLink = styled.a<MenuLinkProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  color: inherit;
+  color: ${({ theme, active }) =>
+    active ? theme.colors.primary.main : 'inherit'};
   text-decoration: inherit;
 `;
 
