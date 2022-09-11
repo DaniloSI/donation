@@ -18,7 +18,8 @@ export default class MyDocument extends Document {
         originalRenderPage({
           enhanceApp: (App) =>
             function enhance(props) {
-              return sheet.collectStyles(<App {...props} />);
+              const TheApp = App as any;
+              return sheet.collectStyles(<TheApp {...props} />);
             }
         });
 

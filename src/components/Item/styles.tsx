@@ -18,10 +18,16 @@ export const WrapperImage = styled.div`
 `;
 
 export const TitleItem = styled.h1`
-  font-size: large;
+  font-size: medium;
   font-weight: 400;
   margin: 8px 8px;
   margin-bottom: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 `;
 
 export const WrapperPricing = styled.div`
@@ -29,10 +35,11 @@ export const WrapperPricing = styled.div`
   align-items: center;
   color: green;
   margin: 8px;
+  margin-top: 14px;
 `;
 
 export const PricingText = styled.span`
-  font-size: x-large;
+  font-size: large;
   font-weight: 400;
-  margin-left: 6px;
+  margin-left: 2px;
 `;

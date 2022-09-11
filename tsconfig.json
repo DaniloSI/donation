@@ -25,6 +25,7 @@
       "@/static/*": ["src/static/*"],
       "@/styles/*": ["src/styles/*"],
       "@/utils/*": ["src/utils/*"],
+      "@/mocks/*": ["src/mocks/*"],
     },
   },
   "exclude": [

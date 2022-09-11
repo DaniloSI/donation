@@ -1,8 +1,7 @@
-import Image from 'next/image';
-
 import { formatDecimal } from '@/utils/formatStrings';
 import { DollarSign } from 'react-feather';
 
+import ItemImage from '../ItemImage';
 import {
   WrapperItem,
   WrapperImage,
@@ -13,9 +12,9 @@ import {
 
 interface IItem {
   id: string;
-  imageUrl: string;
+  imageName: string;
   title: string;
-  pricing: number;
+  price: number;
 }
 
 type Props = {
@@ -23,18 +22,17 @@ type Props = {
 };
 
 const Item: React.FC<Props> = ({ item }) => {
-  const { id, imageUrl, title, pricing } = item;
-
-  const formattedPrice = formatDecimal(pricing);
+  const { id, imageName, title, price } = item;
+  const formattedPrice = formatDecimal(price);
 
   return (
     <WrapperItem key={id}>
       <WrapperImage>
-        <Image src={imageUrl} layout="fill" objectFit="cover" />
+        <ItemImage name={imageName} />
       </WrapperImage>
       <TitleItem>{title}</TitleItem>
       <WrapperPricing>
-        <DollarSign size={18} />
+        <DollarSign size={16} />
         <PricingText>{formattedPrice}</PricingText>
       </WrapperPricing>
     </WrapperItem>
