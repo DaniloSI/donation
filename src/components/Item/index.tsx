@@ -1,3 +1,4 @@
+import { getRelativeCalendar } from '@/utils/formatDate';
 import { formatDecimal } from '@/utils/formatStrings';
 import { DollarSign } from 'react-feather';
 
@@ -7,7 +8,8 @@ import {
   WrapperImage,
   TitleItem,
   WrapperPricing,
-  PricingText
+  PricingText,
+  DateCreated
 } from './styles';
 
 interface IItem {
@@ -15,6 +17,7 @@ interface IItem {
   imageName: string;
   title: string;
   price: number;
+  dateCreated: string;
 }
 
 type Props = {
@@ -22,8 +25,9 @@ type Props = {
 };
 
 const Item: React.FC<Props> = ({ item }) => {
-  const { id, imageName, title, price } = item;
+  const { id, imageName, title, price, dateCreated } = item;
   const formattedPrice = formatDecimal(price);
+  const formattedDate = getRelativeCalendar(dateCreated);
 
   return (
     <WrapperItem key={id}>
@@ -35,6 +39,7 @@ const Item: React.FC<Props> = ({ item }) => {
         <DollarSign size={16} />
         <PricingText>{formattedPrice}</PricingText>
       </WrapperPricing>
+      <DateCreated>{formattedDate}</DateCreated>
     </WrapperItem>
   );
 };

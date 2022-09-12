@@ -1,20 +1,11 @@
-import items from '@/mocks/items';
-import { range } from 'ramda';
+import { getMockedItems } from '@/mocks/utils';
+import { prop, sort, descend } from 'ramda';
 
 import Item from '../Item';
 import { Wrapper, GridItems } from './styles';
 
 const Main = () => {
-  const itemsMock = range(0, 25).map((number) => {
-    const itemMock = items.at(number % items.length);
-
-    return {
-      id: `56528b15-1245-4894-af42-99e9150a23${number}`,
-      imageName: itemMock?.imageName ?? '',
-      title: itemMock?.title ?? '',
-      price: Math.abs(Math.tan(number + 1)) * 1000
-    };
-  });
+  const itemsMock = sort(descend(prop('dateCreated')), getMockedItems(25));
 
   return (
     <Wrapper>

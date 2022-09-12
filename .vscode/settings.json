@@ -4,6 +4,7 @@
         "commitlint",
         "dhuyu",
         "fullscreen",
+        "luxon",
         "plopfile",
         "typecheck",
         "unoptimized",

@@ -20,8 +20,9 @@ export const WrapperImage = styled.div`
 export const TitleItem = styled.h1`
   font-size: medium;
   font-weight: 400;
-  margin: 8px 8px;
-  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -34,12 +35,18 @@ export const WrapperPricing = styled.div`
   display: flex;
   align-items: center;
   color: green;
-  margin: 8px;
-  margin-top: 14px;
+  margin: 4px 8px;
 `;
 
 export const PricingText = styled.span`
   font-size: large;
   font-weight: 400;
   margin-left: 2px;
+`;
+
+export const DateCreated = styled.span`
+  margin-left: 8px;
+  margin-bottom: 8px;
+  font-size: small;
+  color: #909090;
 `;
